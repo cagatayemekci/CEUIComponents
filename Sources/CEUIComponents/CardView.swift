@@ -14,7 +14,7 @@ public class CardViewRowItem: Identifiable, ObservableObject {
     var explanation: String?
     var percentage: Int?
     var image: UIImage?
-    init(name: String? = nil, inAppPurchase: Bool? = false, itemId: Int? = nil, explanation: String? = nil, percentage: Int? = nil, image:UIImage? = nil) {
+    public init(name: String? = nil, inAppPurchase: Bool? = false, itemId: Int? = nil, explanation: String? = nil, percentage: Int? = nil, image:UIImage? = nil) {
         self.name = name
         self.inAppPurchase = inAppPurchase
         self.itemId = itemId
