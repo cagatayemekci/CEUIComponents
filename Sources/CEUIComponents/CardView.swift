@@ -35,6 +35,9 @@ public class CardViewRowItem: Identifiable, ObservableObject {
 
 public struct CardView: View {
     @ObservedObject var rowItem: CardViewRowItem
+    public init(rowItem: CardViewRowItem){
+        self.rowItem = rowItem
+    }
     public var body: some View {
         VStack {
             HStack(spacing: 12.0) {
