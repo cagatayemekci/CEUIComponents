@@ -14,13 +14,15 @@ public class CardViewRowItem: Identifiable, ObservableObject {
     var explanation: String?
     var percentage: Int?
     var image: UIImage?
-    public init(name: String? = nil, inAppPurchase: Bool? = false, itemId: Int? = nil, explanation: String? = nil, percentage: Int? = nil, image:UIImage? = nil) {
+    var imageBackColor: UIColor?
+    public init(name: String? = nil, inAppPurchase: Bool? = false, itemId: Int? = nil, explanation: String? = nil, percentage: Int? = nil, image:UIImage? = nil, imageBackColor: UIColor? = .darkGray) {
         self.name = name
         self.inAppPurchase = inAppPurchase
         self.itemId = itemId
         self.explanation = explanation
         self.percentage =  percentage
         self.image = image
+        self.imageBackColor = imageBackColor
     }
     
     var percentageValue: CGFloat {
@@ -55,7 +57,7 @@ public struct CardView: View {
                     )
                         .animation(Animation.linear(duration: 1).delay(1))
                 }.frame(width: 80, height: 80)
-                    .background(Color("background"))
+                    .background(Color(rowItem.imageBackColor ?? .gray))
                     .cornerRadius(40).padding(.leading, 8)
                 VStack(alignment: .leading, spacing: 8) {
                     Text(rowItem.name ?? "")
