@@ -10,6 +10,7 @@ public class BarObject: ObservableObject {
     @Published var barWith: CGFloat = 0
     @Published var backColor: UIColor = .red
     @Published var barColor: UIColor = .blue
+    public init() {}
 }
 
 public struct BarView: View  {
