@@ -7,9 +7,9 @@
 import SwiftUI
 
 public class BarObject: ObservableObject {
-    @Published var barWith: CGFloat = 0
-    @Published var backColor: UIColor = .red
-    @Published var barColor: UIColor = .blue
+    @Published public var barWith: CGFloat = 0
+    @Published public var backColor: UIColor = .red
+    @Published public var barColor: UIColor = .blue
     public init() {}
 }
 
